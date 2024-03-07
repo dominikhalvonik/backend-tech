@@ -17,6 +17,4 @@ use App\Http\Controllers\TestController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/fsdafdsafdfaw', [TestController::class, 'test']);
-Route::get('/random', [TestController::class, 'random']);
+Route::get('/test', [TestController::class, 'test']);
