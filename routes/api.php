@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/test-post', [TestController::class, 'testPost']);
 Route::post('/test-file', [TestController::class, 'testFile']);
+Route::get('/get-user/{id}', [TestController::class, 'findUserById']);
