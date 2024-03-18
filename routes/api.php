@@ -19,6 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/test-post', [TestController::class, 'testPost']);
+Route::get('/get-user/{id}', [TestController::class, 'findUserById']);
 
 Route::prefix("upload")->group(function () {
     Route::post('/test-upload', [TestController::class, 'testUpload']);
