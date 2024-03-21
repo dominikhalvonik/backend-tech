@@ -24,3 +24,5 @@ Route::post('/test-post', [TestController::class, 'testPost']);
 Route::prefix("upload")->group(function () {
     Route::post('/test-upload', [TestController::class, 'testUpload']);
 });
+
+Route::get('/get-user/{id}', [TestController::class, 'findUserById']);

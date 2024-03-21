@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class TestController extends Controller
@@ -33,5 +35,19 @@ class TestController extends Controller
         file_put_contents("file.txt", $number);
 
         return response()->json("juchuchu");
+    }
+
+    public function findUserById(int $id): JsonResponse
+    {
+        $user = User::find($id);
+        //$user = User::where('email', '=', $email)->first();
+
+        if($user) {
+            return response()->json($user);
+        } else {
+            return response()->json([
+                'message' => 'User not found'
+            ], 404);
+        }
     }
 }
