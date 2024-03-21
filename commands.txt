@@ -1,0 +1,14 @@
+//vytvorenie migracie ktora vytvori tabulku user
+php artisan make:migration create_user_table
+
+//spustenie migracii
+php artisan migrate
+
+//revert vsetkych migracii
+php artisan migrate:rollback
+
+//vytvorenie seederu s nazvom AddUsers
+php artisan make:seeder AddUsers
+
+//vytvorenie modelu s nazvom User
+php artisan make:model User
