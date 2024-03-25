@@ -22,3 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/test-post', [TestController::class, 'testPost']);
 Route::post('/test-file', [TestController::class, 'testFile']);
 Route::get('/get-user/{id}', [TestController::class, 'findUserById']);
+Route::post('/save-user', [TestController::class, 'createUser']);
+Route::post('/add-user-addr', [TestController::class, 'addUserAddress']);
+Route::post('/get-user-by-phone', [TestController::class, 'findUserByPhone']);
+Route::delete('/delete-user/{id}', [TestController::class, 'deleteUser']);
+Route::patch('/update-user/{id}', [TestController::class, 'updateUser']);
